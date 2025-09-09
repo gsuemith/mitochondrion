@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Ensure full-width sections */
+.full-width-section {
+  width: 100vw;
+  /* margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw); */
+}
+
+/* Hero section with curved bottom border */
+.hero-curved {
+  border-bottom-left-radius: 50% 200px;
+  border-bottom-right-radius: 50% 200px;
+  overflow: hidden;
+  margin-bottom: -100px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Liquid backgrounds */
+.liquid-blue-bg {
+  background: linear-gradient(45deg, 
+    #e3f2fd 0%, #bbdefb 25%, #90caf9 50%, #64b5f6 75%, #42a5f5 100%);
+}
+
+/* Green liquid background with circles for Families for Safe Streets */
+.liquid-green-bg {
+  position: relative;
+  background: linear-gradient(45deg, 
+    #e8f5e8 0%, #c8e6c9 25%, #a5d6a7 50%, #81c784 75%, #66bb6a 100%);
+}
+
+  .liquid-green-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3) 60px, transparent 60px),
+      radial-gradient(circle at 80% 40%, rgba(255, 255, 255, 0.2) 80px, transparent 80px),
+      radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.25) 50px, transparent 50px),
+      radial-gradient(circle at 60% 10%, rgba(255, 255, 255, 0.2) 70px, transparent 70px),
+      radial-gradient(circle at 10% 70%, rgba(255, 255, 255, 0.3) 40px, transparent 40px),
+      radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.25) 60px, transparent 60px),
+      radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.2) 45px, transparent 45px),
+      radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.25) 55px, transparent 55px),
+      radial-gradient(circle at 15% 90%, rgba(255, 255, 255, 0.3) 35px, transparent 35px),
+      radial-gradient(circle at 85% 60%, rgba(255, 255, 255, 0.2) 65px, transparent 65px),
+      radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.25) 75px, transparent 75px),
+      radial-gradient(circle at 25% 60%, rgba(255, 255, 255, 0.2) 50px, transparent 50px);
+    background-size: 800px 800px, 1200px 1200px, 1000px 1000px, 1100px 1100px, 700px 700px, 1300px 1300px, 900px 900px, 1100px 1100px, 700px 700px, 1300px 1300px, 1500px 1500px, 1000px 1000px;
+    animation: liquidBubblesOffCenter 15s ease-in-out infinite;
+    pointer-events: none;
+    transform-origin: 30% 50%;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+
+/* Card styling with rounded corners and thick borders */
+.fun-card {
+  border-radius: 20px !important;
+  border: 4px solid #d35400 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Families for Safe Streets section animations */
+.fun-card.floating-card-1 {
+  animation: float1 2.5s ease-in-out infinite !important;
+}
+
+.fun-card.floating-card-2 {
+  animation: float2 2.2s ease-in-out infinite !important;
+}
+
+.fun-card.floating-card-3 {
+  animation: float3 2.8s ease-in-out infinite !important;
+}
+
+/* Training & Science section specific animations - more specific selectors */
+.fun-card.training-card-1 {
+  animation: float4 2.1s ease-in-out infinite !important;
+}
+
+.fun-card.training-card-2 {
+  animation: float5 2.6s ease-in-out infinite !important;
+}
+
+.fun-card.training-card-3 {
+  animation: float6 2.3s ease-in-out infinite !important;
+}
+
+/* More specific selector to override nth-child */
+.fun-card.training-card-3,
+.fun-card.training-card-3:hover {
+  background-color: #e8f5e8 !important; /* Light green */
+  border-color: #2e7d32 !important; /* Dark green */
+}
+
+.fun-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+  border-color: #e67e22 !important;
+}
+
+@keyframes float1 {
+  50% { 
+    transform: translateY(-12px) translateX(2px); 
+  }
+}
+
+@keyframes float2 {
+  50% { 
+    transform: translateY(-18px) translateX(-1px); 
+  }
+}
+
+@keyframes float3 {
+  50% { 
+    transform: translateY(-15px) translateX(4px); 
+  }
+}
+
+@keyframes float4 {
+  50% { 
+    transform: translateY(-10px) translateX(-2px); 
+  }
+}
+
+@keyframes float5 {
+  50% { 
+    transform: translateY(-20px) translateX(1px); 
+  }
+}
+
+@keyframes float6 {
+  50% { 
+    transform: translateY(-14px) translateX(-3px); 
+  }
+}
+
+/* Card border colors matching background colors */
+/* Removed nth-child(1) rule - now using specific classes */
+
+/* Removed nth-child(2) and nth-child(3) rules - now using specific classes */
+
+.fun-card:nth-child(4) { 
+  background-color: #f3e5f5 !important; /* Light purple */
+  border-color: #7b1fa2 !important; /* Darker purple */
+}
+.fun-card:nth-child(4):hover { 
+  background-color: #e1bee7 !important;
+  border-color: #4a148c !important; /* Even darker purple on hover */
+}
+
+.fun-card:nth-child(5) { 
+  background-color: #fce4ec !important; /* Light pink */
+  border-color: #c2185b !important; /* Darker pink */
+}
+.fun-card:nth-child(5):hover { 
+  background-color: #f8bbd9 !important;
+  border-color: #880e4f !important; /* Even darker pink on hover */
+}
+
+.fun-card:nth-child(6) { 
+  background-color: #f1f8e9 !important; /* Light lime */
+  border-color: #558b2f !important; /* Darker lime */
+}
+.fun-card:nth-child(6):hover { 
+  background-color: #dcedc8 !important;
+  border-color: #33691e !important; /* Even darker lime on hover */
+}
+
+.fun-card.training-timeline-card { 
+  background-color: #ffcdd2 !important; /* More red background */
+  border: 4px solid #c62828 !important; /* Redder border */
+}
+.fun-card.training-timeline-card:hover { 
+  background-color: #ef9a9a !important;
+  border: 4px solid #d32f2f !important; /* Even redder on hover */
+}
+
+
+@keyframes liquidFlow {
+  0%, 100% { 
+    transform: rotate(0deg) scale(1);
+    border-radius: 60px 30px 60px 30px;
+  }
+  25% { 
+    transform: rotate(1deg) scale(1.02);
+    border-radius: 50px 40px 50px 40px;
+  }
+  50% { 
+    transform: rotate(0deg) scale(1.05);
+    border-radius: 40px 50px 40px 50px;
+  }
+  75% { 
+    transform: rotate(-1deg) scale(1.02);
+    border-radius: 30px 60px 30px 60px;
+  }
+}
+
+@keyframes liquidBubbles {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  25% { 
+    transform: translateY(-10px) rotate(90deg);
+    opacity: 0.9;
+  }
+  50% { 
+    transform: translateY(-5px) rotate(180deg);
+    opacity: 0.6;
+  }
+  75% { 
+    transform: translateY(-15px) rotate(270deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes liquidBubblesOffCenter {
+  0%, 100% { 
+    transform: rotate(0deg) scale(1);
+    opacity: 0.7;
+  }
+  25% { 
+    transform: rotate(90deg) scale(1.1);
+    opacity: 0.9;
+  }
+  50% { 
+    transform: rotate(180deg) scale(0.9);
+    opacity: 0.6;
+  }
+  75% { 
+    transform: rotate(270deg) scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.liquid-blue-bg {
+  background: linear-gradient(135deg, 
+    #e3f2fd 0%, #bbdefb 25%, #90caf9 50%, #64b5f6 75%, #42a5f5 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-blue-bg::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  right: -100px;
+  bottom: -100px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+              radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  animation: liquidBubbles 12s ease-in-out infinite;
+}
+
+@keyframes liquidBubbles {
+  0%, 100% { 
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% { 
+    transform: translate(20px, -30px) rotate(120deg);
+  }
+  66% { 
+    transform: translate(-15px, 20px) rotate(240deg);
+  }
+}
+
+.fun-card {
+  border-radius: 30px 15px 30px 15px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.fun-card::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 50%, 
+    rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 40px 25px 40px 25px;
+  z-index: -1;
+  animation: cardGlow 6s ease-in-out infinite;
+}
+
+@keyframes cardGlow {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+.fun-card:hover {
+  transform: translateY(-8px) rotate(1deg);
+  border-radius: 35px 20px 35px 20px;
+}
